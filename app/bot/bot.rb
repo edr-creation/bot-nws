@@ -28,12 +28,4 @@ Bot.on :postback do |postback|
       },
       message_type: Facebook::Messenger::Bot::MessagingType::UPDATE
     }, access_token: ENV['ACCESS_TOKEN'])
-    Bot.deliver({
-      recipient: postback.recipient,
-      message: {
-        text: "Une personne de notre équipe humaine pourra lire vos messages, et ainsi vous répondre si vous avez une demande plus spécifique"
-      },
-      message_type: Facebook::Messenger::Bot::MessagingType::UPDATE
-    }, access_token: ENV['ACCESS_TOKEN'])
-  end
 end
