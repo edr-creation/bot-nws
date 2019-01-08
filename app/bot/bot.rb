@@ -28,6 +28,5 @@ Bot.on :postback do |postback|
       },
       message_type: Facebook::Messenger::Bot::MessagingType::UPDATE
     }, access_token: ENV['ACCESS_TOKEN'])
-    }, access_token: ENV['ACCESS_TOKEN'])
   end
 end
