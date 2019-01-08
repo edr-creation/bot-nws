@@ -6,5 +6,5 @@ Facebook::Messenger::Subscriptions.subscribe(
 )
 
 Bot.on :message do |message|
-  message.reply(text: 'Hello, human!')
+  message.reply(text: 'Bonjour')
 end
