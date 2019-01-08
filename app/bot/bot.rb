@@ -23,7 +23,7 @@ Bot.on :postback do |postback|
   if postback.payload == "GET_STARTED_PAYLOAD"
     Bot.deliver({
       recipient: {
-        id: "#{postback.recipient}"
+        id: postback.recipient.id
       },
       message: {
         text: "Bonjour, je suis le bot de la Normandie Web School ! Je peux vous donnez toutes les informations dont vous avez besoin"
