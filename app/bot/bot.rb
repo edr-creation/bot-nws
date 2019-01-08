@@ -22,18 +22,14 @@ end
 Bot.on :postback do |postback|
   if postback.payload == "GET_STARTED_PAYLOAD"
     Bot.deliver({
-      recipient: {
-        id: postback.recipient.id
-      },
+      recipient: postback.recipient,
       message: {
         text: "Bonjour, je suis le bot de la Normandie Web School ! Je peux vous donnez toutes les informations dont vous avez besoin"
       },
       message_type: Facebook::Messenger::Bot::MessagingType::UPDATE
     }, access_token: ENV['ACCESS_TOKEN'])
     Bot.deliver({
-      recipient: {
-        id: postback.recipient.id
-      },
+      recipient: postback.recipient,
       message: {
         text: "Une personne de notre équipe humaine pourra lire vos messages, et ainsi vous répondre si vous avez une demande plus spécifique"
       },
