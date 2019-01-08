@@ -24,7 +24,7 @@ Bot.on :postback do |postback|
     Bot.deliver({
       recipient: postback.recipient,
       message: {
-        text: "Bonjour, je suis le bot de la Normandie Web School ! Je peux vous donnez toutes les informations dont vous avez besoin"
+        text: "Bonjour et bienvenue, je suis le bot de la Normandie Web School ! Je peux vous donnez toutes les informations dont vous avez besoin"
       },
       message_type: Facebook::Messenger::Bot::MessagingType::UPDATE
     }, access_token: ENV['ACCESS_TOKEN'])
