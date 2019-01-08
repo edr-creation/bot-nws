@@ -32,7 +32,7 @@ Bot.on :postback do |postback|
     }, access_token: ENV['ACCESS_TOKEN'])
     Bot.deliver({
       recipient: {
-        id: postback.recipient
+        id: postback.recipient.id
       },
       message: {
         text: "Une personne de notre équipe humaine pourra lire vos messages, et ainsi vous répondre si vous avez une demande plus spécifique"
