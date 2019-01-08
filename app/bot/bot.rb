@@ -4,5 +4,5 @@ include Facebook::Messenger
 Bot.on :message do |message|
   message.typing_on
   
-  message.reply(text: 'Bonjour')
+  message.typing_off
 end
