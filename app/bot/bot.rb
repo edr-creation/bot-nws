@@ -21,6 +21,7 @@ end
 
 Bot.on :postback do |postback|
   if postback.payload == "GET_STARTED_PAYLOAD"
+    puts postback.recipient["id"].to_s
     Bot.deliver({
       recipient: postback.recipient["id"].to_s,
       message: {
