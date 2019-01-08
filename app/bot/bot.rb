@@ -21,7 +21,7 @@ end
 
 Bot.on :postback do |postback|
   if postback.payload == "GET_STARTED_PAYLOAD"
-    message.reply("Bonjour, je suis le bot de la Normandie Web School ! Je peux vous donnez toutes les informations dont vous avez besoin")
+    puts "Bonjour, je suis le bot de la Normandie Web School ! Je peux vous donnez toutes les informations dont vous avez besoin"
     puts "Une personne de notre équipe humaine pourra lire vos messages, et ainsi vous répondre si vous avez une demande plus spécifique"
   end
 end
