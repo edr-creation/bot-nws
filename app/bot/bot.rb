@@ -22,6 +22,6 @@ end
 Bot.on :postback do |postback|
   if postback.payload == "GET_STARTED_PAYLOAD"
     recipient = postback.recipient["id"]
-    puts recipient
+    puts recipient.to_s
   end
 end
