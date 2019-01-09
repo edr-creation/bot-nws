@@ -10,7 +10,26 @@ Facebook::Messenger::Profile.set({
   ],
   get_started: {
     payload: 'GET_STARTED_PAYLOAD'
-  }
+  },
+  persistent_menu: [
+    {
+      locale: 'default',
+      composer_input_disabled: true,
+      call_to_actions: [
+        {
+          title: "Que sais-tu faire ?",
+          type: 'postback',
+          payload: 'GUIDE_PAYLOAD'
+        },
+        {
+          type: 'web_url',
+          title: "Le site internet",
+          payload: 'https://www.normandie-web-school.fr/',
+          webview_height_ratio: 'full'
+        }
+      ]
+    }
+  ]
 }, access_token: ENV['ACCESS_TOKEN'])
 
 Bot.on :message do |message|
