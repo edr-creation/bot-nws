@@ -31,6 +31,6 @@ Bot.on :postback do |postback|
       message: {
         text: 'Bienvenue'
       }
-    }, ENV['ACCESS_TOKEN'])
+    }, access_token: ENV['ACCESS_TOKEN'])
   end
 end
