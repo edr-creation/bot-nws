@@ -21,7 +21,15 @@ end
 
 Bot.on :postback do |postback|
   if postback.payload == "GET_STARTED_PAYLOAD"
-    recipient = postback.recipient["id"]
-    puts recipient.to_s
+    recipient = postback.recipient["id"].to_s
+
+    Bot.deliver({
+      recipient: {
+        "id": recipient
+      },
+      "message": {
+        "text": "Bienvenue"
+      }
+    }, ENV['ACCESS_TOKEN'])
   end
 end
