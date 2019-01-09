@@ -35,7 +35,7 @@ Bot.on :postback do |postback|
   elsif postback.payload == "GUIDE_PAYLOAD"
     postback.reply({
       template_type: 'button',
-      text: "Que puis-je faire pour vous ?"
+      text: "Que puis-je faire pour vous ?",
       buttons: [
         { type: 'postback', title: 'Prochaine JPO', payload: 'JPO_PAYLOAD' },
         { type: 'postback', title: 'Enzo', payload: 'ENZO_PAYLOAD' }
