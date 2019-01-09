@@ -25,6 +25,7 @@ Bot.on :message do |message|
         { content_type: 'text', title: 'Enzo', payload: 'ENZO_PAYLOAD' }
       ]
     })
+  end
   
   message.typing_off
 end
