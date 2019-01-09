@@ -24,11 +24,12 @@ Bot.on :postback do |postback|
     recipient = postback.recipient["id"].to_s
 
     Bot.deliver({
+      messaging_type: 'RESPONSE'
       recipient: {
-        "id": recipient
+        id: recipient
       },
-      "message": {
-        "text": "Bienvenue"
+      message: {
+        text: 'Bienvenue'
       }
     }, ENV['ACCESS_TOKEN'])
   end
