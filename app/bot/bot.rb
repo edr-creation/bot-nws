@@ -20,7 +20,8 @@ Bot.on :message do |message|
 end
 
 Bot.on :postback do |postback|
-  if postback.payload == "GET_STARTED_PAYLOAD"
+  case postback.payload 
+  when "GET_STARTED_PAYLOAD"
     postback.reply({
       text: "Bonjour, je suis le bot de la Normandie Web School, je suis la pour vous renseigner toutes les informations dont vous avez besoin"
     })
@@ -30,7 +31,7 @@ Bot.on :postback do |postback|
         { content_type: 'text', title: 'Que sais tu faire ?', payload: 'GUIDE_PAYLOAD' }
       ]
     })
-  elsif postback.payload == "GUIDE_PAYLOAD"
+  when "GUIDE_PAYLOAD"
     postback.reply({
       text: "Que puis-je faire pour vous ?",
       quick_replies: [
@@ -38,11 +39,11 @@ Bot.on :postback do |postback|
         { content_type: 'text', title: 'Enzo', payload: 'ENZO_PAYLOAD' }
       ]
     })
-  elsif postback.payload == "JPO_PAYLOAD"
+  when "JPO_PAYLOAD"
     postback.reply({
       text: "La prochaine journee porte ouverte se deroulera le 9 fevrier"
     })
-  elsif postback.payload == "ENZO_PAYLOAD"
+  when "ENZO_PAYLOAD"
     postback.reply({
       text: "Prendre Enzo en stage pourra etre benefique pour votre sante, voir conditions magasins participants"
     })
