@@ -15,6 +15,18 @@ Facebook::Messenger::Profile.set({
 
 Bot.on :message do |message|
   message.typing_on
+
+  case message.text
+  when "Que sais tu faire ?"
+    message.reply({
+      postback.reply({
+        text: "Que puis-je faire pour vous ?",
+        quick_replies: [
+          { content_type: 'text', title: 'Prochaine JPO', payload: 'JPO_PAYLOAD' },
+          { content_type: 'text', title: 'Enzo', payload: 'ENZO_PAYLOAD' }
+        ]
+      })
+    })
   
   message.typing_off
 end
