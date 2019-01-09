@@ -25,11 +25,11 @@ Bot.on :message do |message|
         { content_type: 'text', title: 'Enzo', payload: 'ENZO_PAYLOAD' }
       ]
     })
-  when "JPO_PAYLOAD"
+  when "Prochaine JPO"
     message.reply({
       text: "La prochaine journee porte ouverte se deroulera le 9 fevrier"
     })
-  when "ENZO_PAYLOAD"
+  when "Enzo"
     message.reply({
       text: "Prendre Enzo en stage pourra etre benefique pour votre sante, voir conditions magasins participants"
     })
