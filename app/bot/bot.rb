@@ -38,14 +38,13 @@ Bot.on :postback do |postback|
         { content_type: 'text', title: 'Enzo', payload: 'ENZO_PAYLOAD' }
       ]
     })
-    if postback.payload == "JPO_PAYLOAD"
-      postback.reply({
-        text: "La prochaine journee porte ouverte se deroulera le 9 fevrier"
-      })
-    elsif postback.payload == "ENZO_PAYLOAD"
-      postback.reply({
-        text: "Prendre Enzo en stage pourra etre benefique pour votre sante, voir conditions magasins participants"
-      })
-    end
+  elsif postback.payload == "JPO_PAYLOAD"
+    postback.reply({
+      text: "La prochaine journee porte ouverte se deroulera le 9 fevrier"
+    })
+  elsif postback.payload == "ENZO_PAYLOAD"
+    postback.reply({
+      text: "Prendre Enzo en stage pourra etre benefique pour votre sante, voir conditions magasins participants"
+    })
   end
 end
