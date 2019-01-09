@@ -24,7 +24,7 @@ Facebook::Messenger::Profile.set({
         {
           type: 'web_url',
           title: "Le site internet",
-          payload: 'https://www.normandie-web-school.fr/',
+          url: 'https://www.normandie-web-school.fr/',
           webview_height_ratio: 'full'
         }
       ]
