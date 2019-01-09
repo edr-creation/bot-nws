@@ -24,7 +24,7 @@ Bot.on :postback do |postback|
     recipient = postback.recipient["id"].to_s
 
     Bot.deliver({
-      messaging_type: 'RESPONSE'
+      messaging_type: 'RESPONSE',
       recipient: {
         id: recipient
       },
