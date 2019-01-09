@@ -36,7 +36,7 @@ Bot.on :message do |message|
   message.typing_on
 
   case message.text
-  when "Que sais tu faire ?"
+  when "Que sais-tu faire ?"
     message.reply({
       text: "Que puis-je faire pour vous ?",
       quick_replies: [
