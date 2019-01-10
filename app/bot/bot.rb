@@ -40,7 +40,7 @@ Bot.on :message do |message|
       ]
     })
   # =============== L'école ===============
-  when "Des questions sur l'école"
+  when "L'école"
     message.reply({
       text: "Les questions régulièrements posées à propos de l'école",
       quick_replies: [
@@ -125,7 +125,7 @@ Bot.on :postback do |postback|
     postback.reply({
       text: "Posez moi une question :",
       quick_replies: [
-        { content_type: 'text', title: 'Des questions sur l\'école', payload: 'JPO_PAYLOAD' },
+        { content_type: 'text', title: 'L\'école', payload: 'JPO_PAYLOAD' },
         { content_type: 'text', title: 'Enzo', payload: 'ENZO_PAYLOAD' }
       ]
     })
