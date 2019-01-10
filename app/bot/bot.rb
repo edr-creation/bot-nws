@@ -17,11 +17,6 @@ Facebook::Messenger::Profile.set({
       composer_input_disabled: false,
       call_to_actions: [
         {
-          title: "Que sais-tu faire ?",
-          type: 'postback',
-          payload: 'GUIDE_PAYLOAD'
-        },
-        {
           type: 'web_url',
           title: "Le site internet",
           url: 'https://www.normandie-web-school.fr/',
