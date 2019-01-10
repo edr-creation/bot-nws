@@ -44,15 +44,15 @@ Bot.on :message do |message|
     message.reply({
       text: "Les questions régulièrements posées à propos de l'école",
       quick_replies: [
-        { content_type: 'text', title: 'Le diplome est reconnu ?', payload: 'JPO_PAYLOAD' },
+        { content_type: 'text', title: 'diplome reconnu ?', payload: 'JPO_PAYLOAD' },
         { content_type: 'text', title: 'Transports', payload: 'ENZO_PAYLOAD' },
         { content_type: 'text', title: 'Le CROUS', payload: 'ENZO_PAYLOAD' },
         { content_type: 'text', title: 'La restauration', payload: 'ENZO_PAYLOAD' },
-        { content_type: 'text', title: 'Besoin de compétences ?', payload: 'ENZO_PAYLOAD' },
+        { content_type: 'text', title: 'Des compétences ?', payload: 'ENZO_PAYLOAD' },
         { content_type: 'text', title: 'Les débouchés ?', payload: 'ENZO_PAYLOAD' }
       ]
     })
-  when "Le diplome est reconnu ?"
+  when "diplome reconnu ?"
     message.reply({
       text: "Nous nous inscrivons dans le cadre de la Certification Professionnelle de la Commission Nationale de la Certification Professionnelle."
     })
@@ -89,7 +89,7 @@ Bot.on :message do |message|
     message.reply({
       text: "Un Supermarché existe proche du lieu de formation."
     })
-  when "Besoin de compétences ?"
+  when "Des compétences ?"
     message.reply({
       text: "Non. Vous intégrez une école dans laquelle nous vous formons. A la Normandie Web School, nous intégrons des personnes avec une forte motivation !"
     })
