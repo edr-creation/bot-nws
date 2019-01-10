@@ -64,9 +64,10 @@ Bot.on :postback do |postback|
       text: "Bonjour, je suis le bot de la Normandie Web School, je suis là pour vous renseigner toutes les informations dont vous avez besoin"
     })
     postback.reply({
-      text: "Les messages seront lus par notre equipe humaine afin de pouvoir repondre a vos questions plus complexes",
+      text: "Posez moi une question :",
       quick_replies: [
-        { content_type: 'text', title: 'Que sais-tu faire ?', payload: 'GUIDE_PAYLOAD' }
+        { content_type: 'text', title: 'Prochaine JPO', payload: 'JPO_PAYLOAD' },
+        { content_type: 'text', title: 'Enzo', payload: 'ENZO_PAYLOAD' }
       ]
     })
   when "GUIDE_PAYLOAD"
