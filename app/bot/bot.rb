@@ -46,7 +46,7 @@ Bot.on :message do |message|
       quick_replies: [
         { content_type: 'text', title: 'Le diplome est reconnu ?', payload: 'JPO_PAYLOAD' },
         { content_type: 'text', title: 'Transports', payload: 'ENZO_PAYLOAD' },
-        { content_type: 'text', title: 'Le CROUS' payload: 'ENZO_PAYLOAD' },
+        { content_type: 'text', title: 'Le CROUS', payload: 'ENZO_PAYLOAD' },
         { content_type: 'text', title: 'La restauration', payload: 'ENZO_PAYLOAD' },
         { content_type: 'text', title: 'Besoin de compétences ?', payload: 'ENZO_PAYLOAD' },
         { content_type: 'text', title: 'Les débouchés ?', payload: 'ENZO_PAYLOAD' }
