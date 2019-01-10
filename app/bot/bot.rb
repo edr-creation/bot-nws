@@ -46,7 +46,7 @@ Bot.on :message do |message|
     })
   when "Prochaine JPO"
     message.reply({
-      text: "La prochaine journée porte ouverte se deroulera le 9 fevrier"
+      text: "La prochaine journée porte ouverte se deroulera le 6 fevrier au soir"
     })
   when "Enzo"
     message.reply({
