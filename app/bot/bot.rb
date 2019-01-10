@@ -31,18 +31,82 @@ Bot.on :message do |message|
   message.typing_on
 
   case message.text
-  when "Que sais-tu faire ?"
-    message.reply({
-      text: "Que puis-je faire pour vous ?",
+  when "Questions"
+    postback.reply({
+      text: "Posez moi une question :",
       quick_replies: [
-        { content_type: 'text', title: 'Prochaine JPO', payload: 'JPO_PAYLOAD' },
+        { content_type: 'text', title: 'Des questions sur l\'école', payload: 'JPO_PAYLOAD' },
         { content_type: 'text', title: 'Enzo', payload: 'ENZO_PAYLOAD' }
       ]
     })
-  when "Prochaine JPO"
+  # =============== L'école ===============
+  when "Des questions sur l'école"
     message.reply({
-      text: "La prochaine journée porte ouverte se deroulera le 6 fevrier au soir"
+      text: "Les questions régulièrements posées à propos de l'école",
+      quick_replies: [
+        { content_type: 'text', title: 'Le diplome est reconnu ?', payload: 'JPO_PAYLOAD' },
+        { content_type: 'text', title: 'Transports', payload: 'ENZO_PAYLOAD' },
+        { content_type: 'text', title: 'Le CROUS' payload: 'ENZO_PAYLOAD' },
+        { content_type: 'text', title: 'La restauration', payload: 'ENZO_PAYLOAD' },
+        { content_type: 'text', title: 'Besoin de compétences ?', payload: 'ENZO_PAYLOAD' },
+        { content_type: 'text', title: 'Les débouchés ?', payload: 'ENZO_PAYLOAD' }
+      ]
     })
+  when "Le diplome est reconnu ?"
+    message.reply({
+      text: "Nous nous inscrivons dans le cadre de la Certification Professionnelle de la Commission Nationale de la Certification Professionnelle."
+    })
+    message.reply({
+      text: "Titre RNCP de niveau II équivalent bac+3 \"Chef de projet digital\""
+    })
+    message.reply({
+      text: "Organisme certificateur : Institut Européen F2i"
+    })
+    message.reply({
+      text: "Titre enregistré au Répertoire National des Certifications Professionnelles au niveau II, par arrêté du 26/09/2016 publié au JO du 04/10/2016."
+    })
+  when "Transports"
+    message.reply({
+      text: "Le site de l’école est parfaitement desservi par les transports en commun. En effet, une station de métro est présente à quelques pas de l’école (station Jean jaures), et très bientôt la ligne T4 du TEOR."
+    })
+  when "Le CROUS"
+    message.reply({
+      text: " Les étudiants inscrits à la Normandie Web School ne sont pas éligibles à la bourse du CROUS."
+    })
+  when "La restauration"
+    message.reply({
+      text: "Plusieurs moyens de restauration sont à disposition des élèves :"
+    })
+    message.reply({
+      text: "Un micro-ondes et un distributeur automatique sont présents au sein de l’école."
+    })
+    message.reply({
+      text: "Un food-truck est présent tous les jours devant Seine Innopolis."
+    })
+    message.reply({
+      text: "Plusieurs restaurants sont à proximité de l’école."
+    })
+    message.reply({
+      text: "Un Supermarché existe proche du lieu de formation."
+    })
+  when "Besoin de compétences ?"
+    message.reply({
+      text: "Non. Vous intégrez une école dans laquelle nous vous formons. A la Normandie Web School, nous intégrons des personnes avec une forte motivation !"
+    })
+  when "Les débouchés ?"
+    message.reply({
+      text: "Vous pouvez prétendre à plusieurs types de métiers du web :"
+    })
+    message.reply({
+      text: "Développeur web, Développeur application mobile, Développeur Full Stack, Intégrateur, Chef de projet technique, …"
+    })
+    message.reply({
+      text: "Ergonome, Web designer, Infographiste web et mobile, Créatif freelance, Chef de projet digital ou Scrum Master, …"
+    })
+    message.reply({
+      text: "Responsable e-marketing, Responsable acquisition, e-commerce manager, Trafic manager, Community manager, Chargé de référencement, Chef de projet digital, …"
+    })
+  # =============== Troll ===============
   when "Enzo"
     message.reply({
       text: "Prendre Enzo en stage pourra etre benefique pour votre santée, voir conditions magasins participants"
