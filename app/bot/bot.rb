@@ -35,7 +35,7 @@ Bot.on :message do |message|
     postback.reply({
       text: "Posez moi une question :",
       quick_replies: [
-        { content_type: 'text', title: 'Des questions sur l\'école', payload: 'JPO_PAYLOAD' },
+        { content_type: 'text', title: 'L\'école', payload: 'JPO_PAYLOAD' },
         { content_type: 'text', title: 'Enzo', payload: 'ENZO_PAYLOAD' }
       ]
     })
