@@ -46,11 +46,11 @@ Bot.on :message do |message|
     })
   when "Prochaine JPO"
     message.reply({
-      text: "La prochaine journee porte ouverte se deroulera le 9 fevrier"
+      text: "La prochaine journée porte ouverte se deroulera le 9 fevrier"
     })
   when "Enzo"
     message.reply({
-      text: "Prendre Enzo en stage pourra etre benefique pour votre sante, voir conditions magasins participants"
+      text: "Prendre Enzo en stage pourra etre benefique pour votre santée, voir conditions magasins participants"
     })
   end
   
@@ -61,12 +61,12 @@ Bot.on :postback do |postback|
   case postback.payload 
   when "GET_STARTED_PAYLOAD"
     postback.reply({
-      text: "Bonjour, je suis le bot de la Normandie Web School, je suis la pour vous renseigner toutes les informations dont vous avez besoin"
+      text: "Bonjour, je suis le bot de la Normandie Web School, je suis là pour vous renseigner toutes les informations dont vous avez besoin"
     })
     postback.reply({
       text: "Les messages seront lus par notre equipe humaine afin de pouvoir repondre a vos questions plus complexes",
       quick_replies: [
-        { content_type: 'text', title: 'Que sais tu faire ?', payload: 'GUIDE_PAYLOAD' }
+        { content_type: 'text', title: 'Que sais-tu faire ?', payload: 'GUIDE_PAYLOAD' }
       ]
     })
   when "GUIDE_PAYLOAD"
@@ -79,11 +79,11 @@ Bot.on :postback do |postback|
     })
   when "JPO_PAYLOAD"
     postback.reply({
-      text: "La prochaine journee porte ouverte se deroulera le 9 fevrier"
+      text: "La prochaine journée porte ouverte se deroulera le 9 fevrier"
     })
   when "ENZO_PAYLOAD"
     postback.reply({
-      text: "Prendre Enzo en stage pourra etre benefique pour votre sante, voir conditions magasins participants"
+      text: "Prendre Enzo en stage pourra être benefique pour votre santée, voir conditions magasins participants"
     })
   end
 end
